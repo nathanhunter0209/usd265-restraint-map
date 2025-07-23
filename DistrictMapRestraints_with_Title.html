@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+<style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+<style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+<meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<style>
+                #map_d22d8e4c25b3ab2a283fca4946cfff81 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+</head>
+<body><h2 style="text-align:center; font-family:sans-serif; margin-top:20px;">USD 265 District Map: Physical Restraint Incidents</h2>
+<script>
+function setAllLayers(on) {
+    var checkboxes = document.querySelectorAll('.leaflet-control-layers-overlays input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        if (cb.checked !== on) cb.click();
+    });
+}
+let controlContainer = document.querySelector('.leaflet-control-layers');
+let buttons = document.createElement('div');
+buttons.innerHTML = `
+  <div style="padding: 4px 8px;">
+    <button onclick="setAllLayers(true)" style="margin:2px;padding:2px 6px;">Select All</button>
+    <button onclick="setAllLayers(false)" style="margin:2px;padding:2px 6px;">Deselect All</button>
+  </div>
+`;
+controlContainer.insertBefore(buttons, controlContainer.firstChild);
+</script>
+<div class="folium-map" id="map_d22d8e4c25b3ab2a283fca4946cfff81"></div>
+</body>
+<script>
+    
+    
+            var map_d22d8e4c25b3ab2a283fca4946cfff81 = L.map(
+                "map_d22d8e4c25b3ab2a283fca4946cfff81",
+                {
+                    center: [37.65884548333333, -97.55892995833334],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c243a7c9a7ffa70310ef39bfddb1467f = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+        
+    
+            var feature_group_0b8312ca39772238b2847ee7387444ed = L.featureGroup(
+                {}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+        
+    
+            var circle_marker_74723a12843ab68e7ec344c6a58e26a3 = L.circleMarker(
+                [37.6725463, -97.5277825],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0b8312ca39772238b2847ee7387444ed);
+        
+    
+        var popup_37049f290feb1d200e9eb24278675e33 = L.popup({"maxWidth": 200});
+
+        
+            var html_f522ce0d7ed751c9e1776e32df96ead3 = $(`<div id="html_f522ce0d7ed751c9e1776e32df96ead3" style="width: 100.0%; height: 100.0%;"><b>Eisenhower Middle School</b><br><b>2011 - 2012</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_37049f290feb1d200e9eb24278675e33.setContent(html_f522ce0d7ed751c9e1776e32df96ead3);
+        
+
+        circle_marker_74723a12843ab68e7ec344c6a58e26a3.bindPopup(popup_37049f290feb1d200e9eb24278675e33)
+        ;
+
+        
+    
+    
+            var circle_marker_0026ebd68784b14deeecb7aedb1a0c38 = L.circleMarker(
+                [37.6592253, -97.5812896],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0b8312ca39772238b2847ee7387444ed);
+        
+    
+        var popup_30bec877047af2140e5a017b59177dda = L.popup({"maxWidth": 200});
+
+        
+            var html_1800bd3a3c9b82ba4cf5e76d111571cc = $(`<div id="html_1800bd3a3c9b82ba4cf5e76d111571cc" style="width: 100.0%; height: 100.0%;"><b>Challenger Intermediate School</b><br><b>2011 - 2012</b><br>Restraints: <b>8</b></div>`)[0];
+            popup_30bec877047af2140e5a017b59177dda.setContent(html_1800bd3a3c9b82ba4cf5e76d111571cc);
+        
+
+        circle_marker_0026ebd68784b14deeecb7aedb1a0c38.bindPopup(popup_30bec877047af2140e5a017b59177dda)
+        ;
+
+        
+    
+    
+            var circle_marker_74f37e0fa81536e3715dd4ddf73f8948 = L.circleMarker(
+                [37.6750092, -97.5331172],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0b8312ca39772238b2847ee7387444ed);
+        
+    
+        var popup_2db6561e14cfaa1d91c08fb45a3713a1 = L.popup({"maxWidth": 200});
+
+        
+            var html_7f7ba2f48bf461b49dd4b5244475688f = $(`<div id="html_7f7ba2f48bf461b49dd4b5244475688f" style="width: 100.0%; height: 100.0%;"><b>Explorer Elementary School</b><br><b>2011 - 2012</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_2db6561e14cfaa1d91c08fb45a3713a1.setContent(html_7f7ba2f48bf461b49dd4b5244475688f);
+        
+
+        circle_marker_74f37e0fa81536e3715dd4ddf73f8948.bindPopup(popup_2db6561e14cfaa1d91c08fb45a3713a1)
+        ;
+
+        
+    
+    
+            var circle_marker_b6b42384fa9f574553a2dd912a34ceda = L.circleMarker(
+                [37.6614834, -97.5765797],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0b8312ca39772238b2847ee7387444ed);
+        
+    
+        var popup_406d19f201c368cda133044051c07e97 = L.popup({"maxWidth": 200});
+
+        
+            var html_7ec8b910b78988c7fb2629bcbcfa0556 = $(`<div id="html_7ec8b910b78988c7fb2629bcbcfa0556" style="width: 100.0%; height: 100.0%;"><b>Oak Street Elementary School</b><br><b>2011 - 2012</b><br>Restraints: <b>4</b></div>`)[0];
+            popup_406d19f201c368cda133044051c07e97.setContent(html_7ec8b910b78988c7fb2629bcbcfa0556);
+        
+
+        circle_marker_b6b42384fa9f574553a2dd912a34ceda.bindPopup(popup_406d19f201c368cda133044051c07e97)
+        ;
+
+        
+    
+    
+            var feature_group_6f04d50b2c89258163ace247579512ed = L.featureGroup(
+                {}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+        
+    
+            var circle_marker_d78646effe75beab5cef3cbfe4d4a0d7 = L.circleMarker(
+                [37.6725463, -97.5277825],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6f04d50b2c89258163ace247579512ed);
+        
+    
+        var popup_56e65b28d502f6173ed1c86de592b653 = L.popup({"maxWidth": 200});
+
+        
+            var html_6fe51726e318a969939e092d538364bb = $(`<div id="html_6fe51726e318a969939e092d538364bb" style="width: 100.0%; height: 100.0%;"><b>Eisenhower Middle School</b><br><b>2013 - 2014</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_56e65b28d502f6173ed1c86de592b653.setContent(html_6fe51726e318a969939e092d538364bb);
+        
+
+        circle_marker_d78646effe75beab5cef3cbfe4d4a0d7.bindPopup(popup_56e65b28d502f6173ed1c86de592b653)
+        ;
+
+        
+    
+    
+            var circle_marker_2f7c1a0ea26043afd33516a96ae41e99 = L.circleMarker(
+                [37.6483966, -97.5627958],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6f04d50b2c89258163ace247579512ed);
+        
+    
+        var popup_757fa3b26a2d66e6c3b7e9fae4b4ab12 = L.popup({"maxWidth": 200});
+
+        
+            var html_bb80699c64353f4b861bb72e4a22242e = $(`<div id="html_bb80699c64353f4b861bb72e4a22242e" style="width: 100.0%; height: 100.0%;"><b>Amerlia Earhart Elementary School</b><br><b>2013 - 2014</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_757fa3b26a2d66e6c3b7e9fae4b4ab12.setContent(html_bb80699c64353f4b861bb72e4a22242e);
+        
+
+        circle_marker_2f7c1a0ea26043afd33516a96ae41e99.bindPopup(popup_757fa3b26a2d66e6c3b7e9fae4b4ab12)
+        ;
+
+        
+    
+    
+            var circle_marker_6c10cfbabf4759524ef6ad663e08b199 = L.circleMarker(
+                [37.6535278, -97.581572],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6f04d50b2c89258163ace247579512ed);
+        
+    
+        var popup_c10d9a6e4b4c4f94885758ff9a711e4f = L.popup({"maxWidth": 200});
+
+        
+            var html_82f5ea9c140c056183f25a70dc7fab14 = $(`<div id="html_82f5ea9c140c056183f25a70dc7fab14" style="width: 100.0%; height: 100.0%;"><b>Clark Davidson Elementary School</b><br><b>2013 - 2014</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_c10d9a6e4b4c4f94885758ff9a711e4f.setContent(html_82f5ea9c140c056183f25a70dc7fab14);
+        
+
+        circle_marker_6c10cfbabf4759524ef6ad663e08b199.bindPopup(popup_c10d9a6e4b4c4f94885758ff9a711e4f)
+        ;
+
+        
+    
+    
+            var circle_marker_82734a4b58aff8f4121a62d4a379fcb1 = L.circleMarker(
+                [37.6750092, -97.5331172],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6f04d50b2c89258163ace247579512ed);
+        
+    
+        var popup_0d7ec157c9575e50f9b7dc6dc86784cf = L.popup({"maxWidth": 200});
+
+        
+            var html_9be7cf373f1c8ce77600a233fb8324ac = $(`<div id="html_9be7cf373f1c8ce77600a233fb8324ac" style="width: 100.0%; height: 100.0%;"><b>Explorer Elementary School</b><br><b>2013 - 2014</b><br>Restraints: <b>13</b></div>`)[0];
+            popup_0d7ec157c9575e50f9b7dc6dc86784cf.setContent(html_9be7cf373f1c8ce77600a233fb8324ac);
+        
+
+        circle_marker_82734a4b58aff8f4121a62d4a379fcb1.bindPopup(popup_0d7ec157c9575e50f9b7dc6dc86784cf)
+        ;
+
+        
+    
+    
+            var feature_group_4112611601d6298574edd54e76039096 = L.featureGroup(
+                {}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+        
+    
+            var circle_marker_5e74455b736772f112f36f8d77837636 = L.circleMarker(
+                [37.6700023, -97.5273078],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4112611601d6298574edd54e76039096);
+        
+    
+        var popup_3ab8aa0b7bc36b1fdca3006b9d53e9f7 = L.popup({"maxWidth": 200});
+
+        
+            var html_da6a58db89b065139c5f6cca1f924b9d = $(`<div id="html_da6a58db89b065139c5f6cca1f924b9d" style="width: 100.0%; height: 100.0%;"><b>Apollo Elementary School</b><br><b>2015 - 2016</b><br>Restraints: <b>5</b></div>`)[0];
+            popup_3ab8aa0b7bc36b1fdca3006b9d53e9f7.setContent(html_da6a58db89b065139c5f6cca1f924b9d);
+        
+
+        circle_marker_5e74455b736772f112f36f8d77837636.bindPopup(popup_3ab8aa0b7bc36b1fdca3006b9d53e9f7)
+        ;
+
+        
+    
+    
+            var circle_marker_b0fff5e9db5ec4ed7c295cd211d950fe = L.circleMarker(
+                [37.6535278, -97.581572],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4112611601d6298574edd54e76039096);
+        
+    
+        var popup_776a95eb763511e3d5875e493eb5792a = L.popup({"maxWidth": 200});
+
+        
+            var html_386392e8625dec7a960fd89740162830 = $(`<div id="html_386392e8625dec7a960fd89740162830" style="width: 100.0%; height: 100.0%;"><b>Clark Davidson Elementary School</b><br><b>2015 - 2016</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_776a95eb763511e3d5875e493eb5792a.setContent(html_386392e8625dec7a960fd89740162830);
+        
+
+        circle_marker_b0fff5e9db5ec4ed7c295cd211d950fe.bindPopup(popup_776a95eb763511e3d5875e493eb5792a)
+        ;
+
+        
+    
+    
+            var circle_marker_343032f79b0721feb6aec5c755f5868d = L.circleMarker(
+                [37.6750092, -97.5331172],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4112611601d6298574edd54e76039096);
+        
+    
+        var popup_80fb64e11505f93c3c5cb38205e92706 = L.popup({"maxWidth": 200});
+
+        
+            var html_c0fa0afa7d9bb9c9fe7f052ec3afc18b = $(`<div id="html_c0fa0afa7d9bb9c9fe7f052ec3afc18b" style="width: 100.0%; height: 100.0%;"><b>Explorer Elementary School</b><br><b>2015 - 2016</b><br>Restraints: <b>9</b></div>`)[0];
+            popup_80fb64e11505f93c3c5cb38205e92706.setContent(html_c0fa0afa7d9bb9c9fe7f052ec3afc18b);
+        
+
+        circle_marker_343032f79b0721feb6aec5c755f5868d.bindPopup(popup_80fb64e11505f93c3c5cb38205e92706)
+        ;
+
+        
+    
+    
+            var circle_marker_2bceb0871e949d93b4fc380a6b94a5ef = L.circleMarker(
+                [37.6614834, -97.5765797],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4112611601d6298574edd54e76039096);
+        
+    
+        var popup_9a436a4c49dac27e1e318012a7884647 = L.popup({"maxWidth": 200});
+
+        
+            var html_42fdd381b697bb4d5b93ce7620b7f947 = $(`<div id="html_42fdd381b697bb4d5b93ce7620b7f947" style="width: 100.0%; height: 100.0%;"><b>Oak Street Elementary School</b><br><b>2015 - 2016</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_9a436a4c49dac27e1e318012a7884647.setContent(html_42fdd381b697bb4d5b93ce7620b7f947);
+        
+
+        circle_marker_2bceb0871e949d93b4fc380a6b94a5ef.bindPopup(popup_9a436a4c49dac27e1e318012a7884647)
+        ;
+
+        
+    
+    
+            var feature_group_58d2e855b6c6953f925af08fe7598d70 = L.featureGroup(
+                {}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+        
+    
+            var circle_marker_f30121378ce3fd2c61d9b41272766329 = L.circleMarker(
+                [37.6483966, -97.5627958],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_58d2e855b6c6953f925af08fe7598d70);
+        
+    
+        var popup_2b9e7015101e7ee139138033a4491f1d = L.popup({"maxWidth": 200});
+
+        
+            var html_576f341746b47d14f23d6e84babeae14 = $(`<div id="html_576f341746b47d14f23d6e84babeae14" style="width: 100.0%; height: 100.0%;"><b>Amerlia Earhart Elementary School</b><br><b>2017 - 2018</b><br>Restraints: <b>1</b></div>`)[0];
+            popup_2b9e7015101e7ee139138033a4491f1d.setContent(html_576f341746b47d14f23d6e84babeae14);
+        
+
+        circle_marker_f30121378ce3fd2c61d9b41272766329.bindPopup(popup_2b9e7015101e7ee139138033a4491f1d)
+        ;
+
+        
+    
+    
+            var circle_marker_f8c3dbcb0b69e3ed557e15ecbe4a07e9 = L.circleMarker(
+                [37.6700023, -97.5273078],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_58d2e855b6c6953f925af08fe7598d70);
+        
+    
+        var popup_5f4198b1ac1469479592364b6351b696 = L.popup({"maxWidth": 200});
+
+        
+            var html_b5d7b95f5c1dea6d39a3b70a2b0519e9 = $(`<div id="html_b5d7b95f5c1dea6d39a3b70a2b0519e9" style="width: 100.0%; height: 100.0%;"><b>Apollo Elementary School</b><br><b>2017 - 2018</b><br>Restraints: <b>5</b></div>`)[0];
+            popup_5f4198b1ac1469479592364b6351b696.setContent(html_b5d7b95f5c1dea6d39a3b70a2b0519e9);
+        
+
+        circle_marker_f8c3dbcb0b69e3ed557e15ecbe4a07e9.bindPopup(popup_5f4198b1ac1469479592364b6351b696)
+        ;
+
+        
+    
+    
+            var circle_marker_bac2faf66bb1e1211f49b0753c8706ea = L.circleMarker(
+                [37.6535278, -97.581572],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_58d2e855b6c6953f925af08fe7598d70);
+        
+    
+        var popup_f4fe1eb16bbe208c59e79ceaadbb6ffb = L.popup({"maxWidth": 200});
+
+        
+            var html_75efa1d3fa00bb4d47fdcce000e3bf3e = $(`<div id="html_75efa1d3fa00bb4d47fdcce000e3bf3e" style="width: 100.0%; height: 100.0%;"><b>Clark Davidson Elementary School</b><br><b>2017 - 2018</b><br>Restraints: <b>3</b></div>`)[0];
+            popup_f4fe1eb16bbe208c59e79ceaadbb6ffb.setContent(html_75efa1d3fa00bb4d47fdcce000e3bf3e);
+        
+
+        circle_marker_bac2faf66bb1e1211f49b0753c8706ea.bindPopup(popup_f4fe1eb16bbe208c59e79ceaadbb6ffb)
+        ;
+
+        
+    
+    
+            var circle_marker_dc3b894c7a2f5134cc34e2e47779ca2a = L.circleMarker(
+                [37.6750092, -97.5331172],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_58d2e855b6c6953f925af08fe7598d70);
+        
+    
+        var popup_33e77e32426c5947fb223e83be2e9e1b = L.popup({"maxWidth": 200});
+
+        
+            var html_ba96f99b88ddff4d666f74baa47c807b = $(`<div id="html_ba96f99b88ddff4d666f74baa47c807b" style="width: 100.0%; height: 100.0%;"><b>Explorer Elementary School</b><br><b>2017 - 2018</b><br>Restraints: <b>4</b></div>`)[0];
+            popup_33e77e32426c5947fb223e83be2e9e1b.setContent(html_ba96f99b88ddff4d666f74baa47c807b);
+        
+
+        circle_marker_dc3b894c7a2f5134cc34e2e47779ca2a.bindPopup(popup_33e77e32426c5947fb223e83be2e9e1b)
+        ;
+
+        
+    
+    
+            var feature_group_83b83b418c3f1c252544069f706c05c1 = L.featureGroup(
+                {}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+        
+    
+            var circle_marker_43451b73b6ada85466cf0f044b03e832 = L.circleMarker(
+                [37.6710178, -97.5327665],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_b2aec97a666c6394b3bdbacf0c46e5b9 = L.popup({"maxWidth": 200});
+
+        
+            var html_1d7d2c3e5d3db113d6421f8d1f225bf5 = $(`<div id="html_1d7d2c3e5d3db113d6421f8d1f225bf5" style="width: 100.0%; height: 100.0%;"><b>Eisenhower High School</b><br><b>2020 - 2021</b><br>Restraints: <b>1</b></div>`)[0];
+            popup_b2aec97a666c6394b3bdbacf0c46e5b9.setContent(html_1d7d2c3e5d3db113d6421f8d1f225bf5);
+        
+
+        circle_marker_43451b73b6ada85466cf0f044b03e832.bindPopup(popup_b2aec97a666c6394b3bdbacf0c46e5b9)
+        ;
+
+        
+    
+    
+            var circle_marker_3c87266c5034c3447eba16b561c6e77e = L.circleMarker(
+                [37.6470434, -97.5698033],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_432a23b1c5624fba75e238f3c7e12662 = L.popup({"maxWidth": 200});
+
+        
+            var html_3b2c99f258903b4814b9eb1a23d09af6 = $(`<div id="html_3b2c99f258903b4814b9eb1a23d09af6" style="width: 100.0%; height: 100.0%;"><b>Goddard High School</b><br><b>2020 - 2021</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_432a23b1c5624fba75e238f3c7e12662.setContent(html_3b2c99f258903b4814b9eb1a23d09af6);
+        
+
+        circle_marker_3c87266c5034c3447eba16b561c6e77e.bindPopup(popup_432a23b1c5624fba75e238f3c7e12662)
+        ;
+
+        
+    
+    
+            var circle_marker_8d0e7cddacce2a28585c37aedce6db6d = L.circleMarker(
+                [37.6444816, -97.5696588],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_177694044d7cb3f7cc1a2c4d9c7bfcb0 = L.popup({"maxWidth": 200});
+
+        
+            var html_1b7ca9d0e51ea598bb27aff9468f541c = $(`<div id="html_1b7ca9d0e51ea598bb27aff9468f541c" style="width: 100.0%; height: 100.0%;"><b>Goddard Middle School</b><br><b>2020 - 2021</b><br>Restraints: <b>1</b></div>`)[0];
+            popup_177694044d7cb3f7cc1a2c4d9c7bfcb0.setContent(html_1b7ca9d0e51ea598bb27aff9468f541c);
+        
+
+        circle_marker_8d0e7cddacce2a28585c37aedce6db6d.bindPopup(popup_177694044d7cb3f7cc1a2c4d9c7bfcb0)
+        ;
+
+        
+    
+    
+            var circle_marker_a13a5d535b013fff79f652aaa3f1996a = L.circleMarker(
+                [37.6592253, -97.5812896],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_0ca8a07811b4e203c759da819f7821e6 = L.popup({"maxWidth": 200});
+
+        
+            var html_d91af2bab30789e9e1f1850d5080ea3b = $(`<div id="html_d91af2bab30789e9e1f1850d5080ea3b" style="width: 100.0%; height: 100.0%;"><b>Challenger Intermediate School</b><br><b>2020 - 2021</b><br>Restraints: <b>8</b></div>`)[0];
+            popup_0ca8a07811b4e203c759da819f7821e6.setContent(html_d91af2bab30789e9e1f1850d5080ea3b);
+        
+
+        circle_marker_a13a5d535b013fff79f652aaa3f1996a.bindPopup(popup_0ca8a07811b4e203c759da819f7821e6)
+        ;
+
+        
+    
+    
+            var circle_marker_ec3ebf23285c7fcd2113a10dc90aa7b8 = L.circleMarker(
+                [37.6545318, -97.5769966],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_bd016b341a76b76aa0dde3ae07cf5915 = L.popup({"maxWidth": 200});
+
+        
+            var html_ca2cf9a869b3e514da42caf4a6824f2c = $(`<div id="html_ca2cf9a869b3e514da42caf4a6824f2c" style="width: 100.0%; height: 100.0%;"><b>Discovery Intermediate School</b><br><b>2020 - 2021</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_bd016b341a76b76aa0dde3ae07cf5915.setContent(html_ca2cf9a869b3e514da42caf4a6824f2c);
+        
+
+        circle_marker_ec3ebf23285c7fcd2113a10dc90aa7b8.bindPopup(popup_bd016b341a76b76aa0dde3ae07cf5915)
+        ;
+
+        
+    
+    
+            var circle_marker_144d4fc2748619a661a93c204ff63729 = L.circleMarker(
+                [37.6483966, -97.5627958],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_cb9da88b9f7c05563826e60ae3bec739 = L.popup({"maxWidth": 200});
+
+        
+            var html_05799a17d086bd3ef8af3d39880badad = $(`<div id="html_05799a17d086bd3ef8af3d39880badad" style="width: 100.0%; height: 100.0%;"><b>Amerlia Earhart Elementary School</b><br><b>2020 - 2021</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_cb9da88b9f7c05563826e60ae3bec739.setContent(html_05799a17d086bd3ef8af3d39880badad);
+        
+
+        circle_marker_144d4fc2748619a661a93c204ff63729.bindPopup(popup_cb9da88b9f7c05563826e60ae3bec739)
+        ;
+
+        
+    
+    
+            var circle_marker_81df39b80dbdb710f08f2695f75cbc9b = L.circleMarker(
+                [37.6700023, -97.5273078],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_9547beeeb7b70fa1051d3f5d82257f4e = L.popup({"maxWidth": 200});
+
+        
+            var html_676ce146eb890be354e58e5af5ca72ad = $(`<div id="html_676ce146eb890be354e58e5af5ca72ad" style="width: 100.0%; height: 100.0%;"><b>Apollo Elementary School</b><br><b>2020 - 2021</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_9547beeeb7b70fa1051d3f5d82257f4e.setContent(html_676ce146eb890be354e58e5af5ca72ad);
+        
+
+        circle_marker_81df39b80dbdb710f08f2695f75cbc9b.bindPopup(popup_9547beeeb7b70fa1051d3f5d82257f4e)
+        ;
+
+        
+    
+    
+            var circle_marker_0861329d6de16de0c3c194e0ee68ba3b = L.circleMarker(
+                [37.6535278, -97.581572],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_4dc936ccb77321b5a9abcaeaf2fcdea3 = L.popup({"maxWidth": 200});
+
+        
+            var html_d1d7cc4167a26afedf51f2c15b82e2d9 = $(`<div id="html_d1d7cc4167a26afedf51f2c15b82e2d9" style="width: 100.0%; height: 100.0%;"><b>Clark Davidson Elementary School</b><br><b>2020 - 2021</b><br>Restraints: <b>2</b></div>`)[0];
+            popup_4dc936ccb77321b5a9abcaeaf2fcdea3.setContent(html_d1d7cc4167a26afedf51f2c15b82e2d9);
+        
+
+        circle_marker_0861329d6de16de0c3c194e0ee68ba3b.bindPopup(popup_4dc936ccb77321b5a9abcaeaf2fcdea3)
+        ;
+
+        
+    
+    
+            var circle_marker_d8671da97b6be3143928b0f7c97a7e02 = L.circleMarker(
+                [37.6750092, -97.5331172],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_d459a6c79aa7987664b09adc83fcc874 = L.popup({"maxWidth": 200});
+
+        
+            var html_7dd3584d53d3713b5d2750447b04a5e6 = $(`<div id="html_7dd3584d53d3713b5d2750447b04a5e6" style="width: 100.0%; height: 100.0%;"><b>Explorer Elementary School</b><br><b>2020 - 2021</b><br>Restraints: <b>4</b></div>`)[0];
+            popup_d459a6c79aa7987664b09adc83fcc874.setContent(html_7dd3584d53d3713b5d2750447b04a5e6);
+        
+
+        circle_marker_d8671da97b6be3143928b0f7c97a7e02.bindPopup(popup_d459a6c79aa7987664b09adc83fcc874)
+        ;
+
+        
+    
+    
+            var circle_marker_a24f076098d3f468caf709088c2c387d = L.circleMarker(
+                [37.6614834, -97.5765797],
+                {"bubblingMouseEvents": true, "color": "tomato", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "tomato", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_83b83b418c3f1c252544069f706c05c1);
+        
+    
+        var popup_c9aaf1e9dd94a2cb202c6baec24c10d3 = L.popup({"maxWidth": 200});
+
+        
+            var html_77faa8af9dc9e11d4ba2b61400f838e5 = $(`<div id="html_77faa8af9dc9e11d4ba2b61400f838e5" style="width: 100.0%; height: 100.0%;"><b>Oak Street Elementary School</b><br><b>2020 - 2021</b><br>Restraints: <b>6</b></div>`)[0];
+            popup_c9aaf1e9dd94a2cb202c6baec24c10d3.setContent(html_77faa8af9dc9e11d4ba2b61400f838e5);
+        
+
+        circle_marker_a24f076098d3f468caf709088c2c387d.bindPopup(popup_c9aaf1e9dd94a2cb202c6baec24c10d3)
+        ;
+
+        
+    
+    
+            var layer_control_d9facaa782027fe751ae58bfd1830afd = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_c243a7c9a7ffa70310ef39bfddb1467f,
+                },
+                overlays :  {
+                    "School Year: 2011 - 2012" : feature_group_0b8312ca39772238b2847ee7387444ed,
+                    "School Year: 2013 - 2014" : feature_group_6f04d50b2c89258163ace247579512ed,
+                    "School Year: 2015 - 2016" : feature_group_4112611601d6298574edd54e76039096,
+                    "School Year: 2017 - 2018" : feature_group_58d2e855b6c6953f925af08fe7598d70,
+                    "School Year: 2020 - 2021" : feature_group_83b83b418c3f1c252544069f706c05c1,
+                },
+            };
+            L.control.layers(
+                layer_control_d9facaa782027fe751ae58bfd1830afd.base_layers,
+                layer_control_d9facaa782027fe751ae58bfd1830afd.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_d22d8e4c25b3ab2a283fca4946cfff81);
+            feature_group_0b8312ca39772238b2847ee7387444ed.remove();
+            feature_group_6f04d50b2c89258163ace247579512ed.remove();
+            feature_group_4112611601d6298574edd54e76039096.remove();
+            feature_group_58d2e855b6c6953f925af08fe7598d70.remove();
+            feature_group_83b83b418c3f1c252544069f706c05c1.remove();
+        
+</script>
+</html>
